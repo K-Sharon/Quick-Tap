@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>ATTENDANCE FORM</h1>
+
+    <!-- Live Video Feed -->
+    <div class="video-container">
+      <img id="video-feed" src="http://127.0.0.1:5000/video_feed" width="500px">
+    </div>
+
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbxLAcWLSQGSiMdCsZH5q-svyahoA8IYXK7lITYsbBxlfF-W9E3QnU-cW1iPdB2gTT6E/exec" name="attend-form" id="userForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" placeholder="Face Not Recognized" readonly >
+      </div>
+
+      <div class="form-group">
+        <label for="Roll-no">Roll-no:</label>
+        <input type="text" id="roll-no" name="Roll-no" placeholder="Enter your Roll-no" required>
+      </div>
+
+      <input type="hidden" id="time" name="Time">
+      <input type="hidden" id="location" name="Location">
+
+      <input type="submit" value="Submit" name="submit">
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
